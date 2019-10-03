@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Container, Col, Row } from 'react-bootstrap';
+import WeatherLocation from './components/WeatherLocation';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fluid={true}>
+      <Row className="App">
+        <Col>
+            <Row>
+              <h3>Weather City</h3>
+            </Row>
+            <WeatherLocation></WeatherLocation>
+        </Col>
+
+        <Col>
+          <h3>Weather Prediction</h3>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
